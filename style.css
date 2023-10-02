@@ -205,12 +205,13 @@ form button {
     font-family: inherit;
     background-color: var(--transperent);
     border: 1px solid var(--pink);
-    max-width: 200px;
     color: var(--white-text);
     border-radius: 3px;
-    padding: 0.5rem;
-
-    font-size: 1.3rem;
+    padding: 0.5rem 3rem;
+    display: flex;
+    margin: auto;
+    font-size: 1.7rem;
+    font-weight: 500;
 }
 
 form button:hover {
