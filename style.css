@@ -4,9 +4,10 @@
 :root {
     --header-bg-color: rgba(0, 0, 0, 0.85);
     --white-text: #eee;
-    --light-bg-color: rgba(0, 0, 0, 0.1);
+    --light-bg-color: rgba(0, 0, 0, 0.6);
     --discover-btn: rgba(246, 180, 58, 1);
     --discover-btn-hover: rgba(246, 180, 58, 0.85);
+    --orange-brown: rgb(243, 179, 82);
 
 }
 
@@ -26,6 +27,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 
 }
+
+
 
 button {
     cursor: pointer;
@@ -73,16 +76,16 @@ nav {
 
 .welcome {
     padding: 1rem;
-    width: 1000px;
-    text-align: center;
+    width: 900px;
     height: 500px;
     display: flex;
     flex-direction: column;
-    color: rgb(244, 170, 61);
+    color: var(--orange-brown);
     font-family: 500;
     font-family: 'Italianno', cursive;
     font-size: 5.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 #discover-btn {
@@ -103,3 +106,49 @@ nav {
     background-color: var(--discover-btn-hover);
 }
 
+footer {
+    background-color: var(--light-bg-color);
+    padding: 1rem;
+    text-align: center;
+    color: var(--white-text);
+}
+
+footer p {
+    font-size: 1.rem;
+}
+
+footer span {
+    color: var(--orange-brown);
+}
+
+/*Menu*/
+
+.menu {
+    background-color: var(--light-bg-color);
+    max-width: 700px;
+    margin: auto;
+    margin-top: 3.5rem;
+    padding: 2rem;
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    color: blanchedalmond;
+    gap: 0.6rem;
+}
+
+.menu h1 {
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 1.3rem;
+}
+
+.menu .item-title {
+    color: var(--white-text);
+}
+
+.menu .item-desc {
+    color: var(--white-text);
+    font-weight: 300;
+}
