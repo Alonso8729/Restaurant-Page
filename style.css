@@ -8,6 +8,8 @@
     --discover-btn: rgba(246, 180, 58, 1);
     --discover-btn-hover: rgba(246, 180, 58, 0.85);
     --orange-brown: rgb(243, 179, 82);
+    --pink: #ed1250;
+    --transperent: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -151,4 +153,67 @@ footer span {
 .menu .item-desc {
     color: var(--white-text);
     font-weight: 300;
+}
+
+/*CONTACT*/
+.container {
+    background-color: var(--light-bg-color);
+    max-width: 700px;
+    color: var(--orange-brown);
+    margin: auto;
+    margin-top: 3.5rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+
+}
+
+.container p i {
+    color: var(--pink);
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.container p {
+    color: var(--white-text);
+    margin-left: 1rem;
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form h1 {
+    color: var(--pink);
+    font-size: 2rem;
+    text-align: center;
+}
+
+input {
+    background-color: var(--transperent);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--pink);
+    color: var(--white-text);
+}
+
+form button {
+    font-family: inherit;
+    background-color: var(--transperent);
+    border: 1px solid var(--pink);
+    max-width: 200px;
+    color: var(--white-text);
+    border-radius: 3px;
+    padding: 0.5rem;
+
+    font-size: 1.3rem;
+}
+
+form button:hover {
+    background-color: var(--pink);
+
 }
