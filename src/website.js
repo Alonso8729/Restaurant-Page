@@ -5,6 +5,11 @@ import loadMenu from "./menu"
 
 
 
+function createMain() {
+    const main = document.createElement('main');
+    main.classList.add('main');
+    return main;
+}
 
 
 function createFooter() {
