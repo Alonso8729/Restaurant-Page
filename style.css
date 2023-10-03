@@ -34,6 +34,8 @@ body {
 
 button {
     cursor: pointer;
+    border-style: none;
+    outline: none;
 }
 
 /*HEADER*/
@@ -54,14 +56,18 @@ header h1 {
     font-family: 'Italianno', cursive;
 }
 
-header button {
+.nav-button {
     border: none;
     background: none;
     font-size: 1.6rem;
     font-weight: 300;
     color: inherit;
     font-family: inherit;
+}
 
+.active {
+    border-bottom: 1px solid var(--pink);
+    color: var(--pink);
 }
 
 nav {
@@ -76,7 +82,8 @@ nav {
     margin: auto;
 }
 
-.welcome {
+/*welcome*/
+.home {
     padding: 1rem;
     width: 900px;
     height: 500px;
@@ -156,7 +163,7 @@ footer span {
 }
 
 /*CONTACT*/
-.container {
+.contact {
     background-color: var(--light-bg-color);
     max-width: 700px;
     color: var(--orange-brown);
@@ -167,14 +174,14 @@ footer span {
 
 }
 
-.container p i {
+.contact p i {
     color: var(--pink);
     margin-right: 1rem;
     margin-bottom: 2rem;
 
 }
 
-.container p {
+.contact p {
     color: var(--white-text);
     margin-left: 1rem;
     font-weight: 300;
