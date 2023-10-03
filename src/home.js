@@ -7,7 +7,7 @@ function createHome() {
     paragraph.textContent = "where every dish is a masterpiece on your plate";
     //Add discover menu button
     const button = document.createElement('button');
-    button.setAttribute('id','discover-btn');
+    button.setAttribute('id', 'discover-btn');
     button.textContent = "Discover Menu";
     return home
 }
@@ -15,10 +15,9 @@ function createHome() {
 
 
 function loadHome() {
-    const main = document.createElement('main');
-    main.classList.add('main');
+    const main = document.getElementById('main');
+    main.textContent = "";
     main.appendChild(createHome());
-    return main;
 }
 
 export default loadHome;
