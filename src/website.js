@@ -10,15 +10,20 @@ function createHeader() {
     title.classList.add('title');
     title.textContent = "Fresco";
     header.appendChild(title);
+    header.appendChild(createNav());
 
+    return header;
+}
+
+function createNav() {
     //Create and append nav
     const nav = document.createElement('nav');
-    header.appendChild(nav);
 
     //Create event listeners and append nav's buttons
     //HOME BUTTON
     const homeButton = document.createElement('button');
     homeButton.classList.add('nav-button');
+    homeButton.textContent = "Home";
     homeButton.addEventListener('click', (e) => {
         if (e.target.classList.contains("active")) return;
         setToActive(homeButton);
@@ -27,6 +32,7 @@ function createHeader() {
 
     //MENU BUTTON
     const menuButton = document.createElement('button');
+    menuButton.textContent = "Menu";
     menuButton.classList.add('nav-button');
     menuButton.addEventListener('click', (e) => {
         if (e.target.classList.contains("active")) return;
@@ -37,29 +43,28 @@ function createHeader() {
     //CONTACT BUTTON
     const contactButton = document.createElement('button');
     contactButton.classList.add('nav-button');
+    contactButton.textContent = "Contact";
+    contactButton.setAttribute('id', 'contact-btn');
     contactButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
         setToActive(contactButton);
         loadContact();
     })
 
-
-
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
     nav.appendChild(contactButton);
 
-    return header;
-
+    return nav;
 }
 
 function setToActive(button) {
     const buttons = document.querySelectorAll(".nav-button");
-    buttons.forEach((button) => {
-        if (button !== this) {
-            button.classList.remove('active')
+    buttons.forEach((btn) => {
+        if (btn !== button) {
+            btn.classList.remove('active');
         }
-    })
+    });
     button.classList.add("active");
 }
 
@@ -67,6 +72,7 @@ function setToActive(button) {
 function createMain() {
     const main = document.createElement('main');
     main.classList.add('main');
+    main.setAttribute('id', 'main');
     return main;
 }
 
@@ -76,7 +82,7 @@ function createFooter() {
     const paragraph = document.createElement('p');
     const span = document.createElement('span');
     span.textContent = "Alonso";
-    paragraph.textContent = "Built by";
+    paragraph.textContent = "Built by ";
     paragraph.appendChild(span);
     footer.appendChild(paragraph);
 
@@ -89,10 +95,8 @@ function loadWebsite() {
     content.appendChild(createMain());
     content.appendChild(createFooter());
 
-    //button that sets home active by adding class called active
     setToActive(document.querySelector('.nav-button'))
-
     loadHome();
 }
 
-export default loadWebsite();
+export { loadWebsite, setToActive };
