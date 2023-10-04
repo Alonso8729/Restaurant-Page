@@ -2,33 +2,13 @@ function createContact() {
     const contact = document.createElement('div');
     contact.classList.add('contact');
 
-    //first paragraph
-    const p1 = document.createElement('p');
-    const locationIcon = document.createElement('i');
-    locationIcon.classList.add('fa-solid', 'fa-location-dot');
-    p1.appendChild(locationIcon);
-    p1.textContent = "Via dei Tribunali, 179/180, 80139 Napoli"
-    contact.appendChild(p1);
 
-    //second paragraph
-    const p2 = document.createElement('p');
-    const clockIcon = document.createElement('i');
-    clockIcon.classList.add('fa-solid', 'fa-clock');
-    p2.appendChild(clockIcon);
-    p2.textContent = "Open daily between the hours: 12:00-00:00";
-    contact.appendChild(p2);
-
-    //third paragraph
-    const p3 = document.createElement('p');
-    const volumeIcon = document.createElement('i');
-    volumeIcon.classList.add('fa-solid', 'fa-phone-volume');
-    p3.appendChild(volumeIcon);
-    p3.textContent = "Open daily between the hours: 12:00-00:00";
-    contact.appendChild(p3);
+    contact.appendChild(createParagraph("fa-location-dot", "Via dei Tribunali, 179/180, 80139 Napoli"));
+    contact.appendChild(createParagraph("fa-clock", "Open daily between the hours: 12:00-00:00"));
+    contact.appendChild(createParagraph("fa-phone-volume", "+39 081 1874 5627"));
 
     //FORM
-    const form = createForm();
-    contact.appendChild(form);
+    contact.appendChild(createForm());
 
     return contact;
 }
@@ -39,7 +19,7 @@ function createForm() {
 
     //Create and append header
     const title = document.createElement('h1');
-    h1.textContent = "CONTACT US";
+    title.textContent = "CONTACT US";
     form.appendChild(title);
 
     //Create and append NAME input
@@ -54,7 +34,7 @@ function createForm() {
     email.type = 'email'
     email.id = 'email';
     email.name = 'email';
-    email.placeholder = 'email';
+    email.placeholder = 'EMAIL';
     email.required = true;
     form.appendChild(email);
 
@@ -70,7 +50,7 @@ function createForm() {
     const message = document.createElement('input');
     message.type = 'text';
     message.id = 'message'
-    message.placeholder = 'message';
+    message.placeholder = 'MESSAGE';
     message.name = 'message';
     form.appendChild(message);
 
@@ -81,6 +61,20 @@ function createForm() {
     form.appendChild(button);
 
     return form;
+}
+
+function createParagraph(iconClass, text) {
+    const p = document.createElement('p');
+    const icon = document.createElement('i');
+    icon.classList.add('fa-solid', iconClass);
+    p.textContent = text;
+
+    const iconContainer = document.createElement('div');
+    iconContainer.classList.add('icon-container');
+    iconContainer.appendChild(icon);
+    iconContainer.appendChild(p);
+
+    return iconContainer;
 }
 
 function loadContact() {
