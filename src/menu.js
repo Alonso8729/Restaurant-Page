@@ -1,10 +1,10 @@
 function createMenu() {
     const menu = document.createElement('div');
-    menu.className.add('menu');
+    menu.classList.add('menu');
 
     //Create and append main header
     const mainHeader = document.createElement('h1');
-    mainHeader.className.add('menu-title');
+    mainHeader.classList.add('menu-title');
     mainHeader.textContent = "MENU"
     menu.appendChild.mainHeader
 
