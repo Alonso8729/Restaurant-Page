@@ -27,8 +27,19 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+
+}
 
 button {
     cursor: pointer;
@@ -47,6 +58,7 @@ header {
     align-content: center;
     color: var(--white-text);
     font-size: 3rem;
+    width: 100vw;
 
 }
 
@@ -120,10 +132,7 @@ footer {
     padding: 1rem;
     text-align: center;
     color: var(--white-text);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    width: 100vw;
 }
 
 footer p {
@@ -169,7 +178,7 @@ footer span {
 /*CONTACT*/
 .contact {
     background-color: var(--light-bg-color);
-    max-width: 700px;
+    max-width: 650px;
     color: var(--orange-brown);
     margin: auto;
     margin-top: 1.5rem;
@@ -243,34 +252,30 @@ form button:hover {
 }
 
 /* Media queries */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     .home,
     .contact,
     .menu {
-        height: 70%;
-        width: 70%;
+        height: 100%;
+        width: 95%;
     }
 
-    footer {
-        position: unset;
-    }
+
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     html {
-        font-size: 57.5%;
+        font-size: 80%;
     }
 
     .home,
     .contact,
     .menu {
-        height: 50%;
-        width: 50%;
+        height: 100%;
+        width: 80%;
     }
 
-    footer {
-        position: unset;
-    }
+
 }
